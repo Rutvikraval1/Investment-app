@@ -33,37 +33,32 @@ TextEditingController current_value=TextEditingController(text: '0');
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     return Scaffold_widget(
-        appBar: AppBar(
-          backgroundColor: transparent_color,
-          title: SizedBox(
-            width: width / 2.2,
-            child:  ListTile(
-              dense: true,
-              contentPadding: EdgeInsets.zero,
-              leading: Common_container.container(
-                  child: SvgPicture_asset(appImage.user)),
-              title: Text('Good Morning',
-                  style: Themes().style_light_shade_10),
-              subtitle: Text('Rutvik Raval',
-                  style: Themes().style_Dark_shade_14_600),
-            ),
-          ),
-          excludeHeaderSemantics: true,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 15),
-              child: Common_container.container(
-                  child: SvgPicture_asset(appImage.notification)),
-            )
-          ],
-          elevation: 0,
-          automaticallyImplyLeading: false,
-        ),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(15),
             child: Column(
               children: <Widget>[
+                Row(
+                  children: [
+                    Expanded(
+                      child: ListTile(
+                        dense: true,
+                        contentPadding: EdgeInsets.zero,
+                        leading: Common_container.container(
+                            child: SvgPicture_asset(appImage.user)),
+                        title: Text('Good Morning',
+                            style: Themes().style_light_shade_10),
+                        subtitle: Text('Rutvik Raval',
+                            style: Themes().style_Dark_shade_14_600),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 15),
+                      child: Common_container.container(
+                          child: SvgPicture_asset(appImage.notification)),
+                    )
+                  ],
+                ),
                 height_15,
                 custom_slider_banner(onchange: current_value,ontap: (value){
                   print("ss");

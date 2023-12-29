@@ -7,7 +7,7 @@ import '../core/presentation/widgets/bottomNavigation/CoustomBotomBar/custom_nav
 import '../core/presentation/widgets/image_asset_widget.dart';
 import '../core/utils/color.dart';
 import '../core/utils/image.dart';
-import 'Investment/coupons_screen.dart';
+import 'Investment/Investment.dart';
 import 'dashboad/dashboard_screen.dart';
 
 class mainhome_screen extends StatefulWidget {
@@ -30,7 +30,7 @@ class _mainhome_screenState extends State<mainhome_screen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold_widget(
-      body:  getBody[_currentIndex],
+      body:  const dashboard_screen(),
       bottomNavigationBar:_buildBottomBar(context),
     );
   }
@@ -41,6 +41,13 @@ class _mainhome_screenState extends State<mainhome_screen> {
       selectedColor: brand_color,
       elevation: 0,
       onTap: (value)  {
+        if(value==1){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const Investment_screen(),)).then((value){
+            _currentIndex=0;
+            setState(() {});
+          });
+        }
+
         if(value!=2){
           setState(() {
             _currentIndex = value;

@@ -20,4 +20,10 @@ class appImage{
   static const String image1 = 'assets/icon/png/image1.png';
   static const String image2 = 'assets/icon/png/image2.png';
   static const String image3 = 'assets/icon/png/image3.png';
+
+  ///dummy image
+  static const String dummy1 = 'assets/icon/png/dummy1.png';
+  static const String dummy2 = 'assets/icon/png/dummy2.png';
+  static const String dummy3 = 'assets/icon/png/dummy3.png';
+  static const String dummy4 = 'assets/icon/png/dummy4.png';
 }

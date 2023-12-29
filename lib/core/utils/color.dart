@@ -15,3 +15,7 @@ const Dark_shade = Color(0xFF162345);
 const white24_color = Color(0xFFF8F8F8);
 const orange_color = Color(0xffff7531);
 const dark_blue_color = Color(0xff0B1222);
+const dark_blue10_color = Color(0xff050B29);
+const nevy_blue_color = Color(0xFF495677);
+const nevy_blue20_color = Color(0xFF768099);
+const nevy_blue10_color = Color(0xFF77809A);
