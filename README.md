@@ -3,7 +3,8 @@
 A new Flutter project.
 
 ## Demo
+## https://www.youtube.com/watch?v=KrZX8iVcWMk
 
 <div align="center">
-  <video src="Screenshot/Investment_app_video.mp4"/>
+  <video src="https://www.youtube.com/watch?v=KrZX8iVcWMk"/>
 </div>
