@@ -6,6 +6,7 @@ import 'package:investment_app/core/utils/theme.dart';
 
 import '../../core/presentation/widgets/card/card.dart';
 import '../../core/presentation/widgets/commonText_Title.dart';
+import '../../core/presentation/widgets/investement_cal.dart';
 import '../../core/presentation/widgets/navigate_btn.dart';
 import '../../core/utils/color.dart';
 import '../../core/utils/image.dart';
@@ -20,6 +21,9 @@ class Investment_screen extends StatefulWidget {
 }
 
 class _Investment_screenState extends State<Investment_screen> {
+
+
+
 
   List imagepath=[
     appImage.dummy1,
@@ -144,14 +148,13 @@ class _Investment_screenState extends State<Investment_screen> {
                         Container(
                           width: 106.41,
                           height: 25,
-                          decoration: ShapeDecoration(
+                          decoration:ShapeDecoration(
                             color: Colors.white,
                             shape: RoundedRectangleBorder(
                               side: const BorderSide(width: 1, color: Color(0x191C2C56)),
                               borderRadius: BorderRadius.circular(4),
                             ),
                           ),
-                          // padding: EdgeInsets.symmetric(vertical: 20,horizontal: 10),
                           alignment: Alignment.center,
                           child: Text(
                             '3 Year Term',
@@ -162,14 +165,13 @@ class _Investment_screenState extends State<Investment_screen> {
                         Container(
                           width: 106.41,
                           height: 25,
-                          decoration: ShapeDecoration(
+                          decoration:ShapeDecoration(
                             color: Colors.white,
                             shape: RoundedRectangleBorder(
                               side: const BorderSide(width: 1, color: Color(0x191C2C56)),
                               borderRadius: BorderRadius.circular(4),
                             ),
                           ),
-                          // padding: EdgeInsets.symmetric(vertical: 20,horizontal: 10),
                           alignment: Alignment.center,
                           child: Text(
                             '5 Year Term',
@@ -179,210 +181,14 @@ class _Investment_screenState extends State<Investment_screen> {
                       ],
                     ),
                     height_10,
-                    Container(
-                      padding: const EdgeInsets.all(20),
-                      decoration: ShapeDecoration(
-                        color: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        shadows: const [
-                          BoxShadow(
-                            color: Color(0x19979FB8),
-                            blurRadius: 40,
-                            offset: Offset(4, 10),
-                            spreadRadius: 0,
-                          )
-                        ],
-                      ),
-                      child: Column(
-                        children: [
-                          Text(
-                            'Investment Amount',
-                            textAlign: TextAlign.center,
-                            style: Themes().style_nevy_blue20_color_12_600
-                          ),
-                          height_20,
-                          Row(
-                            children: [
-                              Container(
-                                width: 31.07,
-                                height: 32.03,
-                                decoration: const ShapeDecoration(
-                                  color: Color(0xFFF8F8F8),
-                                  shape: OvalBorder(),
-                                  shadows: [
-                                    BoxShadow(
-                                      color: Color(0x33989FB9),
-                                      blurRadius: 4,
-                                      offset: Offset(0, 3),
-                                      spreadRadius: 1,
-                                    )
-                                  ],
-                                ),
-                                alignment: Alignment.center,
-                                child: Text('-', style: Themes().style_brand_color_36_600),
-                              ),
-                              const Expanded(
-                                child: Text(
-                                  '\$10,000',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    color: Color(0xFF1C2C56),
-                                    fontSize: 36,
-                                    fontFamily: 'Lato',
-                                    fontWeight: FontWeight.w600,
-                                    height: 0.05,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: 31.07,
-                                height: 32.03,
-                                decoration: const ShapeDecoration(
-                                  color: Color(0xFFF8F8F8),
-                                  shape: OvalBorder(),
-                                  shadows: [
-                                    BoxShadow(
-                                      color: Color(0x33989FB9),
-                                      blurRadius: 4,
-                                      offset: Offset(0, 3),
-                                      spreadRadius: 1,
-                                    )
-                                  ],
-                                ),
-                                alignment: Alignment.center,
-                                child: Text('+', style: Themes().style_brand_color_36_600),
-                              ),
-
-                            ],
-                          ),
-                          height_20,
-                          const SizedBox(
-                            width: 76.63,
-                            height: 19.52,
-                            child: Text(
-                              '6.81% YTM',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Color(0xFF46AF35),
-                                fontSize: 13,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ),
-                          height_15,
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Container(
-                                width: 106.41,
-                                height: 25,
-                                decoration: ShapeDecoration(
-                                  color: const Color(0xFFE6E9F1),
-                                  shape: RoundedRectangleBorder(
-                                    side: const BorderSide(width: 1, color: Color(0xFF1C2C56)),
-                                    borderRadius: BorderRadius.circular(4),
-                                  ),
-                                ),
-                                alignment: Alignment.center,
-                                child: Text(
-                                  '3 Year Term',
-                                  style: Themes().style_nevy_blue10_color_13_600,
-                                ),
-                              ),
-                              Container(
-                                width: 106.41,
-                                height: 25,
-                                decoration: ShapeDecoration(
-                                  color: const Color(0xFFF8F8F8),
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-                                ),
-                                alignment: Alignment.center,
-                                child: Text(
-                                  '5 Year Term',
-                                  style: Themes().style_nevy_blue10_color_13_600,
-                                ),
-                              ),
-                            ],
-                          ),
-                          height_20,
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                      'Capital At Maturity',
-                                      style:Themes().style_nevy_blue20_color_12_600
-                                  ),
-                                  height_5,
-                                  Text(
-                                    '\$10,681',
-                                    style:Themes().style_brand_color_22_500,
-                                  ),
-                                ],
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                children: [
-                                  Text(
-                                      'Total Interest',
-                                      style:Themes().style_nevy_blue20_color_12_600
-                                  ),
-                                  height_5,
-                                  Text(
-                                    '\$681',
-                                    style:Themes().style_brand_color_22_500,
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                          height_10,
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                      'Annual Interest',
-                                      style:Themes().style_nevy_blue20_color_12_600
-                                  ),
-                                  height_5,
-                                  Text(
-                                    '\$68.1',
-                                    style:Themes().style_brand_color_22_500,
-                                  ),
-                                ],
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                children: [
-                                  Text(
-                                      'Average Maturity Date ',
-                                      style:Themes().style_nevy_blue20_color_12_600
-                                  ),
-                                  height_5,
-                                  Text(
-                                    '2026',
-                                    style:Themes().style_brand_color_22_500,
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
+                    const investement_cal(),
                     height_10,
                     Common_heading.heading(heading_text:'Bonds',view_onTap: (){}),
                     height_8,
                     ListView.builder(
                       itemCount: imagepath.length,
                       shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) =>Column(
                       children: [
                         Common_card.Listtile_card(
@@ -402,11 +208,16 @@ class _Investment_screenState extends State<Investment_screen> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
         child: NavigateBtn(text:'Create Investment Account',onPressed: (){
-          Navigator.push(context,MaterialPageRoute(builder:(context) => InvestmentCalculator(),));
+          Navigator.push(context,MaterialPageRoute(builder:(context) => const InvestmentCalculator(),));
 
         }),
       ),
 
     );
   }
+
+
+
+
+
 }
