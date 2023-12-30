@@ -3,7 +3,6 @@
 import 'package:investment_app/core/presentation/Scaffold_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:investment_app/core/utils/theme.dart';
-
 import '../../core/presentation/widgets/card/card.dart';
 import '../../core/presentation/widgets/commonText_Title.dart';
 import '../../core/presentation/widgets/investement_cal.dart';
@@ -11,7 +10,6 @@ import '../../core/presentation/widgets/navigate_btn.dart';
 import '../../core/utils/color.dart';
 import '../../core/utils/image.dart';
 import '../../core/utils/sizebox.dart';
-import '../../data.dart';
 
 class Investment_screen extends StatefulWidget {
   const Investment_screen({super.key});
@@ -207,10 +205,7 @@ class _Investment_screenState extends State<Investment_screen> {
         ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-        child: NavigateBtn(text:'Create Investment Account',onPressed: (){
-          Navigator.push(context,MaterialPageRoute(builder:(context) => const InvestmentCalculator(),));
-
-        }),
+        child: NavigateBtn(text:'Create Investment Account',onPressed: (){}),
       ),
 
     );
